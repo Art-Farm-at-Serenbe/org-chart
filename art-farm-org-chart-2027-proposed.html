@@ -207,6 +207,14 @@
     .time-bar .seg:last-child { border-right: none; }
     .time-labels { display: flex; margin-top: 6px; }
     .time-labels span { font-size: 11.5px; color: var(--ink-muted); line-height: 1.3; padding-right: 4px; overflow: hidden; }
+    .flex-block { border-top: 1px solid var(--border); margin-top: 8px; padding-top: 20px; }
+    .flex-row { margin: 0 0 20px; }
+    .bank { background: var(--muted); border-radius: 12px; padding: 16px 20px; margin-top: 6px; }
+    .bank-title { font-weight: 700; color: var(--forest); font-size: 14px; margin: 0 0 8px; }
+    .bank ul { columns: 2; column-gap: 32px; margin: 0; padding-left: 18px; font-size: 13px; color: var(--ink); line-height: 1.5; }
+    .bank li { break-inside: avoid; margin-bottom: 4px; }
+    .bank-note { font-size: 12.5px; color: var(--ink-muted); margin: 10px 0 0; }
+    @media (max-width: 700px) { .flex-block { min-width: 720px; padding: 20px 16px 0; } }
     @media (max-width: 700px) { .time-rows, .time-legend { min-width: 720px; padding: 0 16px; } .time-chart { padding: 18px 0 14px; } }
   </style>
 </head>
@@ -223,7 +231,7 @@
 
   <p class="scroll-hint">Scroll to see full chart &rarr;</p>
   <figure class="chart">
-    <svg viewBox="0 0 1200 1844" role="img" aria-label="Proposed 2027 org chart for Art Farm at Serenbe. The ten-member board and Board Chair Bill Sisson are unchanged; the Chair is the liaison to the Executive Director, Courtney Horvath, with no separate Chief of Staff role. Two full-time seats report to the Executive Director: a Programs and Production Manager who makes the shows, and a Membership and Community Manager who fills the house and keeps the people. Contracted partners (marketing coordinator, bookkeeping, fundraising firm) report to the Executive Director unless noted. Fundraising and community work is still shared with the board, now with an owner for each area. Anne Chaisson remains a separate contractor reporting to Garnie Nygren and Sheri Salata.">
+    <svg viewBox="0 0 1200 1912" role="img" aria-label="Proposed 2027 org chart for Art Farm at Serenbe. The ten-member board and Board Chair Bill Sisson are unchanged; the Chair is the liaison to the Executive Director, Courtney Horvath, with no separate Chief of Staff role. Two full-time seats report to the Executive Director: a Programs and Production Manager who makes the shows, and a Community and Engagement Manager who leads Public Art, Art Park, Cottages and Residency, Education and Environment and fills the house and keeps the people. Contracted partners (marketing coordinator, bookkeeping, fundraising firm) report to the Executive Director unless noted. Fundraising and community work is still shared with the board, now with an owner for each area. Anne Chaisson remains a separate contractor reporting to Garnie Nygren and Sheri Salata.">
       <defs>
         <marker id="arrow" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
           <path d="M0,0 L8,4 L0,8 z" fill="var(--forest)"></path>
@@ -423,8 +431,8 @@
       <g>
         <rect x="440" y="1136" width="300" height="110" rx="14" fill="var(--flag-tint)" stroke="var(--flag)" stroke-width="1.2"></rect>
         <text x="590" y="1158" text-anchor="middle" class="svg-eyebrow" font-size="10" fill="var(--flag)" letter-spacing="1.1">PROPOSED SEAT · FULL-TIME</text>
-        <text x="590" y="1182" text-anchor="middle" class="svg-name" font-size="16" fill="var(--ink)">Membership &amp; Community Manager</text>
-        <text x="590" y="1204" text-anchor="middle" class="svg-title" font-size="13" fill="var(--ink-muted)">Fills the house and keeps the people</text>
+        <text x="590" y="1182" text-anchor="middle" class="svg-name" font-size="16" fill="var(--ink)">Community &amp; Engagement Manager</text>
+        <text x="590" y="1204" text-anchor="middle" class="svg-title" font-size="13" fill="var(--ink-muted)">Community programs, members, the house</text>
         <text x="590" y="1224" text-anchor="middle" class="svg-title" font-size="11.5" fill="var(--ink-muted)">Reports to: Executive Director</text>
       </g>
       <g>
@@ -440,42 +448,48 @@
 
       <!-- Seat responsibilities, per the 2027 function map -->
       <g>
-        <rect x="90" y="1274" width="300" height="314" rx="14" fill="var(--surface)" stroke="var(--border)" stroke-width="1.2"></rect>
+        <rect x="90" y="1274" width="300" height="348" rx="14" fill="var(--surface)" stroke="var(--border)" stroke-width="1.2"></rect>
         <text x="240" y="1296" text-anchor="middle" class="svg-eyebrow" font-size="11" fill="var(--accent)" letter-spacing="1.5">RESPONSIBILITIES</text>
         <text x="108" y="1316" text-anchor="start" font-size="11" font-weight="700" fill="var(--forest)">PROGRAM CALENDAR</text>
         <text x="108" y="1330" text-anchor="start" class="svg-title" font-size="11.5" fill="var(--ink-muted)">&ndash; Fewer, stronger events, set with chairs</text>
         <text x="108" y="1350" text-anchor="start" font-size="11" font-weight="700" fill="var(--forest)">COUNCILS</text>
-        <text x="108" y="1364" text-anchor="start" class="svg-title" font-size="11.5" fill="var(--ink-muted)">&ndash; All seven; chairs curate, staff produce</text>
+        <text x="108" y="1364" text-anchor="start" class="svg-title" font-size="11.5" fill="var(--ink-muted)">&ndash; Music, Dance, Theater, Film</text>
         <text x="108" y="1384" text-anchor="start" font-size="11" font-weight="700" fill="var(--forest)">PRODUCTION</text>
-        <text x="108" y="1398" text-anchor="start" class="svg-title" font-size="11.5" fill="var(--ink-muted)">&ndash; Artists, venues, vendors, permits, crew</text>
-        <text x="108" y="1418" text-anchor="start" font-size="11" font-weight="700" fill="var(--forest)">EVENT FINANCES</text>
-        <text x="108" y="1432" text-anchor="start" class="svg-title" font-size="11.5" fill="var(--ink-muted)">&ndash; Budgets, invoices; actuals in 10 days</text>
-        <text x="108" y="1452" text-anchor="start" font-size="11" font-weight="700" fill="var(--forest)">SPONSOR DELIVERY</text>
-        <text x="108" y="1466" text-anchor="start" class="svg-title" font-size="11.5" fill="var(--ink-muted)">&ndash; Benefits delivered at every event</text>
-        <text x="108" y="1486" text-anchor="start" font-size="11" font-weight="700" fill="var(--forest)">PROJECTS &amp; SPACE</text>
-        <text x="108" y="1500" text-anchor="start" class="svg-title" font-size="11.5" fill="var(--ink-muted)">&ndash; Public Art, Art Park, cottages, space</text>
-        <text x="108" y="1520" text-anchor="start" font-size="11" font-weight="700" fill="var(--forest)">FILM FESTIVAL</text>
-        <text x="108" y="1534" text-anchor="start" class="svg-title" font-size="11.5" fill="var(--ink-muted)">&ndash; Production support, as scoped</text>
-        <text x="108" y="1564" text-anchor="start" font-size="10.5" font-style="italic" fill="var(--ink-muted)">Measured by: on-time, on-budget shows</text>
+        <text x="108" y="1398" text-anchor="start" class="svg-title" font-size="11.5" fill="var(--ink-muted)">&ndash; All events: venues, vendors, permits, crew</text>
+        <text x="108" y="1418" text-anchor="start" font-size="11" font-weight="700" fill="var(--forest)">FACILITIES MANAGEMENT</text>
+        <text x="108" y="1432" text-anchor="start" class="svg-title" font-size="11.5" fill="var(--ink-muted)">&ndash; Office, storage, equipment, maintenance</text>
+        <text x="108" y="1452" text-anchor="start" font-size="11" font-weight="700" fill="var(--forest)">EVENT FINANCES</text>
+        <text x="108" y="1466" text-anchor="start" class="svg-title" font-size="11.5" fill="var(--ink-muted)">&ndash; Budgets, invoices; actuals in 10 days</text>
+        <text x="108" y="1486" text-anchor="start" font-size="11" font-weight="700" fill="var(--forest)">SPONSOR DELIVERY</text>
+        <text x="108" y="1500" text-anchor="start" class="svg-title" font-size="11.5" fill="var(--ink-muted)">&ndash; Benefits delivered at every event</text>
+        <text x="108" y="1520" text-anchor="start" font-size="11" font-weight="700" fill="var(--forest)">SPECIAL PROJECTS</text>
+        <text x="108" y="1534" text-anchor="start" class="svg-title" font-size="11.5" fill="var(--ink-muted)">&ndash; Milestones tracked to plan</text>
+        <text x="108" y="1554" text-anchor="start" font-size="11" font-weight="700" fill="var(--forest)">FILM FESTIVAL</text>
+        <text x="108" y="1568" text-anchor="start" class="svg-title" font-size="11.5" fill="var(--ink-muted)">&ndash; Production support, as scoped</text>
+        <text x="108" y="1598" text-anchor="start" font-size="10.5" font-style="italic" fill="var(--ink-muted)">Measured by: on-time, on-budget shows</text>
       </g>
       <g>
-        <rect x="440" y="1274" width="300" height="314" rx="14" fill="var(--surface)" stroke="var(--border)" stroke-width="1.2"></rect>
+        <rect x="440" y="1274" width="300" height="382" rx="14" fill="var(--surface)" stroke="var(--border)" stroke-width="1.2"></rect>
         <text x="590" y="1296" text-anchor="middle" class="svg-eyebrow" font-size="11" fill="var(--accent)" letter-spacing="1.5">RESPONSIBILITIES</text>
-        <text x="458" y="1316" text-anchor="start" font-size="11" font-weight="700" fill="var(--forest)">MEMBERSHIP</text>
-        <text x="458" y="1330" text-anchor="start" class="svg-title" font-size="11.5" fill="var(--ink-muted)">&ndash; April launch, benefits, renewals</text>
-        <text x="458" y="1350" text-anchor="start" font-size="11" font-weight="700" fill="var(--forest)">RELATIONSHIPS</text>
-        <text x="458" y="1364" text-anchor="start" class="svg-title" font-size="11.5" fill="var(--ink-muted)">&ndash; Knows the regulars; coffees and hosting</text>
-        <text x="458" y="1384" text-anchor="start" font-size="11" font-weight="700" fill="var(--forest)">COMMUNITY GIVING</text>
-        <text x="458" y="1398" text-anchor="start" class="svg-title" font-size="11.5" fill="var(--ink-muted)">&ndash; Smaller and neighborhood asks</text>
-        <text x="458" y="1418" text-anchor="start" font-size="11" font-weight="700" fill="var(--forest)">TICKETING &amp; BOX OFFICE</text>
-        <text x="458" y="1432" text-anchor="start" class="svg-title" font-size="11.5" fill="var(--ink-muted)">&ndash; Platform, front of house, merch sales</text>
-        <text x="458" y="1452" text-anchor="start" font-size="11" font-weight="700" fill="var(--forest)">PEOPLE DATA</text>
-        <text x="458" y="1466" text-anchor="start" class="svg-title" font-size="11.5" fill="var(--ink-muted)">&ndash; One database; gifts recorded and thanked</text>
-        <text x="458" y="1486" text-anchor="start" font-size="11" font-weight="700" fill="var(--forest)">VOLUNTEERS</text>
-        <text x="458" y="1500" text-anchor="start" class="svg-title" font-size="11.5" fill="var(--ink-muted)">&ndash; Recruited and scheduled for events</text>
-        <text x="458" y="1520" text-anchor="start" font-size="11" font-weight="700" fill="var(--forest)">WITH THE ED</text>
-        <text x="458" y="1534" text-anchor="start" class="svg-title" font-size="11.5" fill="var(--ink-muted)">&ndash; Merch design, photo/video, City Hall</text>
-        <text x="458" y="1564" text-anchor="start" font-size="10.5" font-style="italic" fill="var(--ink-muted)">Measured by: members, sell-through, repeats</text>
+        <text x="458" y="1316" text-anchor="start" font-size="11" font-weight="700" fill="var(--forest)">PUBLIC ART &amp; ART PARK</text>
+        <text x="458" y="1330" text-anchor="start" class="svg-title" font-size="11.5" fill="var(--ink-muted)">&ndash; Commissions and Art Park programming</text>
+        <text x="458" y="1350" text-anchor="start" font-size="11" font-weight="700" fill="var(--forest)">COMMUNITY PROGRAMS</text>
+        <text x="458" y="1364" text-anchor="start" class="svg-title" font-size="11.5" fill="var(--ink-muted)">&ndash; Residency, Education, Environment</text>
+        <text x="458" y="1384" text-anchor="start" font-size="11" font-weight="700" fill="var(--forest)">MEMBERSHIP</text>
+        <text x="458" y="1398" text-anchor="start" class="svg-title" font-size="11.5" fill="var(--ink-muted)">&ndash; April launch, benefits, renewals</text>
+        <text x="458" y="1418" text-anchor="start" font-size="11" font-weight="700" fill="var(--forest)">RELATIONSHIPS</text>
+        <text x="458" y="1432" text-anchor="start" class="svg-title" font-size="11.5" fill="var(--ink-muted)">&ndash; Knows the regulars; coffees and hosting</text>
+        <text x="458" y="1452" text-anchor="start" font-size="11" font-weight="700" fill="var(--forest)">COMMUNITY GIVING</text>
+        <text x="458" y="1466" text-anchor="start" class="svg-title" font-size="11.5" fill="var(--ink-muted)">&ndash; Smaller and neighborhood asks</text>
+        <text x="458" y="1486" text-anchor="start" font-size="11" font-weight="700" fill="var(--forest)">TICKETING &amp; BOX OFFICE</text>
+        <text x="458" y="1500" text-anchor="start" class="svg-title" font-size="11.5" fill="var(--ink-muted)">&ndash; Platform, front of house, merch sales</text>
+        <text x="458" y="1520" text-anchor="start" font-size="11" font-weight="700" fill="var(--forest)">PEOPLE DATA</text>
+        <text x="458" y="1534" text-anchor="start" class="svg-title" font-size="11.5" fill="var(--ink-muted)">&ndash; One database; gifts recorded and thanked</text>
+        <text x="458" y="1554" text-anchor="start" font-size="11" font-weight="700" fill="var(--forest)">VOLUNTEERS</text>
+        <text x="458" y="1568" text-anchor="start" class="svg-title" font-size="11.5" fill="var(--ink-muted)">&ndash; Recruited and scheduled for events</text>
+        <text x="458" y="1588" text-anchor="start" font-size="11" font-weight="700" fill="var(--forest)">WITH THE ED</text>
+        <text x="458" y="1602" text-anchor="start" class="svg-title" font-size="11.5" fill="var(--ink-muted)">&ndash; Merch design, photo/video, City Hall</text>
+        <text x="458" y="1632" text-anchor="start" font-size="10.5" font-style="italic" fill="var(--ink-muted)">Measured by: members, sell-through, repeats</text>
       </g>
       <g>
         <rect x="790" y="1274" width="300" height="178" rx="14" fill="var(--surface)" stroke="var(--border)" stroke-width="1.2"></rect>
@@ -488,32 +502,32 @@
         <text x="808" y="1398" text-anchor="start" class="svg-title" font-size="11.5" fill="var(--ink-muted)">&ndash; Campaign, major-gift support, grant writing</text>
         <text x="808" y="1428" text-anchor="start" font-size="10.5" font-style="italic" fill="var(--ink-muted)">Measured by: written scope, monthly report</text>
       </g>
-      <line x1="240" y1="1588" x2="240" y2="1608" stroke="var(--forest)" stroke-width="1.2" stroke-dasharray="2 3"></line>
-      <line x1="590" y1="1588" x2="590" y2="1608" stroke="var(--forest)" stroke-width="1.2" stroke-dasharray="2 3"></line>
-      <line x1="940" y1="1452" x2="940" y2="1608" stroke="var(--forest)" stroke-width="1.2" stroke-dasharray="2 3"></line>
+      <line x1="240" y1="1622" x2="240" y2="1676" stroke="var(--forest)" stroke-width="1.2" stroke-dasharray="2 3"></line>
+      <line x1="590" y1="1656" x2="590" y2="1676" stroke="var(--forest)" stroke-width="1.2" stroke-dasharray="2 3"></line>
+      <line x1="940" y1="1452" x2="940" y2="1676" stroke="var(--forest)" stroke-width="1.2" stroke-dasharray="2 3"></line>
 
       <!-- Fundraising & community: still shared with the board, now with a named owner for each area -->
       <g>
-        <rect x="90" y="1608" width="1000" height="104" rx="14" fill="var(--muted)" stroke="var(--ink-muted)" stroke-width="1.2" stroke-dasharray="1 5"></rect>
-        <text x="590" y="1631" text-anchor="middle" class="svg-eyebrow" font-size="11" fill="var(--accent)" letter-spacing="1.3">FUNDRAISING &amp; COMMUNITY</text>
-        <text x="590" y="1648" text-anchor="middle" font-size="11.5" fill="var(--ink-muted)">Still shared with the board, now with an owner for each area</text>
-        <text x="215" y="1676" text-anchor="middle" font-size="10" font-weight="700" letter-spacing="0.5" fill="var(--forest)">MAJOR GIFTS &amp; SPONSORSHIP</text>
-        <text x="215" y="1692" text-anchor="middle" font-size="10.5" fill="var(--ink-muted)">ED + board + fundraising firm</text>
-        <text x="465" y="1676" text-anchor="middle" font-size="10" font-weight="700" letter-spacing="0.5" fill="var(--forest)">MEMBERSHIP &amp; COMMUNITY GIVING</text>
-        <text x="465" y="1692" text-anchor="middle" font-size="10.5" fill="var(--ink-muted)">Membership &amp; Community Manager</text>
-        <text x="715" y="1676" text-anchor="middle" font-size="10" font-weight="700" letter-spacing="0.5" fill="var(--forest)">GRANTS &amp; ANNUAL APPEAL</text>
-        <text x="715" y="1692" text-anchor="middle" font-size="10.5" fill="var(--ink-muted)">ED + fundraising firm + marketing</text>
-        <text x="965" y="1676" text-anchor="middle" font-size="10" font-weight="700" letter-spacing="0.5" fill="var(--forest)">EVENT SUPPORT</text>
-        <text x="965" y="1692" text-anchor="middle" font-size="10.5" fill="var(--ink-muted)">All hands for key events</text>
+        <rect x="90" y="1676" width="1000" height="104" rx="14" fill="var(--muted)" stroke="var(--ink-muted)" stroke-width="1.2" stroke-dasharray="1 5"></rect>
+        <text x="590" y="1699" text-anchor="middle" class="svg-eyebrow" font-size="11" fill="var(--accent)" letter-spacing="1.3">FUNDRAISING &amp; COMMUNITY</text>
+        <text x="590" y="1716" text-anchor="middle" font-size="11.5" fill="var(--ink-muted)">Still shared with the board, now with an owner for each area</text>
+        <text x="215" y="1744" text-anchor="middle" font-size="10" font-weight="700" letter-spacing="0.5" fill="var(--forest)">MAJOR GIFTS &amp; SPONSORSHIP</text>
+        <text x="215" y="1760" text-anchor="middle" font-size="10.5" fill="var(--ink-muted)">ED + board + fundraising firm</text>
+        <text x="465" y="1744" text-anchor="middle" font-size="10" font-weight="700" letter-spacing="0.5" fill="var(--forest)">MEMBERSHIP &amp; COMMUNITY GIVING</text>
+        <text x="465" y="1760" text-anchor="middle" font-size="10.5" fill="var(--ink-muted)">Community &amp; Engagement Manager</text>
+        <text x="715" y="1744" text-anchor="middle" font-size="10" font-weight="700" letter-spacing="0.5" fill="var(--forest)">GRANTS &amp; ANNUAL APPEAL</text>
+        <text x="715" y="1760" text-anchor="middle" font-size="10.5" fill="var(--ink-muted)">ED + fundraising firm + marketing</text>
+        <text x="965" y="1744" text-anchor="middle" font-size="10" font-weight="700" letter-spacing="0.5" fill="var(--forest)">EVENT SUPPORT</text>
+        <text x="965" y="1760" text-anchor="middle" font-size="10.5" fill="var(--ink-muted)">All hands for key events</text>
       </g>
 
       <!-- ===== ADVISORY COUNCIL (unchanged) ===== -->
       <g>
-        <rect x="90" y="1742" width="1000" height="82" rx="14" fill="var(--surface)" stroke="var(--ink-muted)" stroke-width="1.2" stroke-dasharray="1 5"></rect>
-        <text x="590" y="1765" text-anchor="middle" class="svg-eyebrow" font-size="11" fill="var(--accent)" letter-spacing="1.3">ADVISORY COUNCIL</text>
-        <text x="590" y="1782" text-anchor="middle" font-size="11.5" fill="var(--ink-muted)">Past board members providing counsel and support, not part of the governing board</text>
-        <text x="590" y="1802" text-anchor="middle" class="svg-title" font-size="12.5" fill="var(--ink)">Janice Barton, Cindy Lederman</text>
-        <text x="590" y="1817" text-anchor="middle" font-size="9.5" font-style="italic" fill="var(--ink-muted)">Roster in progress; additional members to be added</text>
+        <rect x="90" y="1810" width="1000" height="82" rx="14" fill="var(--surface)" stroke="var(--ink-muted)" stroke-width="1.2" stroke-dasharray="1 5"></rect>
+        <text x="590" y="1833" text-anchor="middle" class="svg-eyebrow" font-size="11" fill="var(--accent)" letter-spacing="1.3">ADVISORY COUNCIL</text>
+        <text x="590" y="1850" text-anchor="middle" font-size="11.5" fill="var(--ink-muted)">Past board members providing counsel and support, not part of the governing board</text>
+        <text x="590" y="1870" text-anchor="middle" class="svg-title" font-size="12.5" fill="var(--ink)">Janice Barton, Cindy Lederman</text>
+        <text x="590" y="1885" text-anchor="middle" font-size="9.5" font-style="italic" fill="var(--ink-muted)">Roster in progress; additional members to be added</text>
       </g>
     </svg>
     <figcaption>Proposed structure for 2027, drawn from the 2027 function map. Staff seats show functions, not people; titles and reporting lines are to be confirmed against agreements before anything is published.</figcaption>
@@ -531,14 +545,25 @@
       </div>
       <div class="time-row">
         <div class="time-head"><span class="time-role">Programs &amp; Production Manager <em>&middot; 45 hrs/week</em></span><span class="time-sum">Shows 85% &middot; Revenue 5% &middot; Leadership 10%</span></div>
-        <div class="time-bar"><span class="seg" style="width:45%;background:#004221;color:#f8faf8" title="Event production: 45%, about 20.2h a week">20.2h</span><span class="seg" style="width:15%;background:#004221;color:#f8faf8" title="Calendar &amp; council liaison: 15%, about 6.8h a week">6.8h</span><span class="seg" style="width:10%;background:#004221;color:#f8faf8" title="Artist booking &amp; contracts: 10%, about 4.5h a week">4.5h</span><span class="seg" style="width:10%;background:#004221;color:#f8faf8" title="Public Art, Art Park, cottages &amp; space: 10%, about 4.5h a week">4.5h</span><span class="seg" style="width:5%;background:#004221;color:#f8faf8" title="Film Festival support: 5%, about 2.2h a week">2.2h</span><span class="seg" style="width:5%;background:#f46700;color:#ffffff" title="Sponsor benefit delivery: 5%, about 2.2h a week">2.2h</span><span class="seg" style="width:10%;background:#bcd6c3;color:#002214" title="Event budgets &amp; settlement: 10%, about 4.5h a week">4.5h</span></div>
-        <div class="time-labels"><span style="width:45%" title="Event production">Event production</span><span style="width:15%" title="Calendar &amp; council liaison">Calendar &amp; councils</span><span style="width:10%" title="Artist booking &amp; contracts">Artists</span><span style="width:10%" title="Public Art, Art Park, cottages &amp; space">Projects &amp; space</span><span style="width:5%" title="Film Festival support"></span><span style="width:5%" title="Sponsor benefit delivery"></span><span style="width:10%" title="Event budgets &amp; settlement">Budgets</span></div>
+        <div class="time-bar"><span class="seg" style="width:45%;background:#004221;color:#f8faf8" title="Event production (all events): 45%, about 20.2h a week">20.2h</span><span class="seg" style="width:10%;background:#004221;color:#f8faf8" title="Facilities management: 10%, about 4.5h a week">4.5h</span><span class="seg" style="width:10%;background:#004221;color:#f8faf8" title="Artist booking &amp; contracts: 10%, about 4.5h a week">4.5h</span><span class="seg" style="width:10%;background:#004221;color:#f8faf8" title="Calendar &amp; councils: 10%, about 4.5h a week">4.5h</span><span class="seg" style="width:5%;background:#004221;color:#f8faf8" title="Special Projects: 5%, about 2.2h a week">2.2h</span><span class="seg" style="width:5%;background:#004221;color:#f8faf8" title="Film Festival support: 5%, about 2.2h a week">2.2h</span><span class="seg" style="width:5%;background:#f46700;color:#ffffff" title="Sponsor benefit delivery: 5%, about 2.2h a week">2.2h</span><span class="seg" style="width:10%;background:#bcd6c3;color:#002214" title="Event budgets &amp; settlement: 10%, about 4.5h a week">4.5h</span></div>
+        <div class="time-labels"><span style="width:45%" title="Event production (all events)">Event production</span><span style="width:10%" title="Facilities management">Facilities</span><span style="width:10%" title="Artist booking &amp; contracts">Artists</span><span style="width:10%" title="Calendar &amp; councils">Councils</span><span style="width:5%" title="Special Projects"></span><span style="width:5%" title="Film Festival support"></span><span style="width:5%" title="Sponsor benefit delivery"></span><span style="width:10%" title="Event budgets &amp; settlement">Budgets</span></div>
       </div>
       <div class="time-row">
-        <div class="time-head"><span class="time-role">Membership &amp; Community Manager <em>&middot; 45 hrs/week</em></span><span class="time-sum">Audience 75% &middot; Revenue 15% &middot; Leadership 10%</span></div>
-        <div class="time-bar"><span class="seg" style="width:20%;background:#3d8b55;color:#f8faf8" title="Membership program: 20%, about 9h a week">9h</span><span class="seg" style="width:20%;background:#3d8b55;color:#f8faf8" title="Relationships &amp; hosting: 20%, about 9h a week">9h</span><span class="seg" style="width:20%;background:#3d8b55;color:#f8faf8" title="Ticketing, box office &amp; merch: 20%, about 9h a week">9h</span><span class="seg" style="width:5%;background:#3d8b55;color:#f8faf8" title="Volunteers: 5%, about 2.2h a week">2.2h</span><span class="seg" style="width:5%;background:#3d8b55;color:#f8faf8" title="Marketing contractor coordination: 5%, about 2.2h a week">2.2h</span><span class="seg" style="width:5%;background:#3d8b55;color:#f8faf8" title="Work with ED: merch, photo, City Hall: 5%, about 2.2h a week">2.2h</span><span class="seg" style="width:15%;background:#f46700;color:#ffffff" title="Community &amp; individual giving: 15%, about 6.8h a week">6.8h</span><span class="seg" style="width:10%;background:#bcd6c3;color:#002214" title="People database &amp; reporting: 10%, about 4.5h a week">4.5h</span></div>
-        <div class="time-labels"><span style="width:20%" title="Membership program">Membership</span><span style="width:20%" title="Relationships &amp; hosting">Relationships</span><span style="width:20%" title="Ticketing, box office &amp; merch">Ticketing &amp; box office</span><span style="width:5%" title="Volunteers"></span><span style="width:5%" title="Marketing contractor coordination"></span><span style="width:5%" title="Work with ED: merch, photo, City Hall"></span><span style="width:15%" title="Community &amp; individual giving">Giving</span><span style="width:10%" title="People database &amp; reporting">Data</span></div>
+        <div class="time-head"><span class="time-role">Community &amp; Engagement Manager <em>&middot; 45 hrs/week</em></span><span class="time-sum">Shows 30% &middot; Audience 50% &middot; Revenue 10% &middot; Leadership 10%</span></div>
+        <div class="time-bar"><span class="seg" style="width:30%;background:#004221;color:#f8faf8" title="Public Art, Art Park, Cottages/Residency, Education &amp; Environment: 30%, about 13.5h a week">13.5h</span><span class="seg" style="width:15%;background:#3d8b55;color:#f8faf8" title="Membership program: 15%, about 6.8h a week">6.8h</span><span class="seg" style="width:15%;background:#3d8b55;color:#f8faf8" title="Relationships &amp; hosting: 15%, about 6.8h a week">6.8h</span><span class="seg" style="width:10%;background:#3d8b55;color:#f8faf8" title="Ticketing, box office &amp; merch: 10%, about 4.5h a week">4.5h</span><span class="seg" style="width:5%;background:#3d8b55;color:#f8faf8" title="Volunteers &amp; marketing coordination: 5%, about 2.2h a week">2.2h</span><span class="seg" style="width:5%;background:#3d8b55;color:#f8faf8" title="Work with ED: merch, photo, City Hall: 5%, about 2.2h a week">2.2h</span><span class="seg" style="width:10%;background:#f46700;color:#ffffff" title="Community &amp; individual giving: 10%, about 4.5h a week">4.5h</span><span class="seg" style="width:10%;background:#bcd6c3;color:#002214" title="People database &amp; reporting: 10%, about 4.5h a week">4.5h</span></div>
+        <div class="time-labels"><span style="width:30%" title="Public Art, Art Park, Cottages/Residency, Education &amp; Environment">Community programs</span><span style="width:15%" title="Membership program">Membership</span><span style="width:15%" title="Relationships &amp; hosting">Relationships</span><span style="width:10%" title="Ticketing, box office &amp; merch">Ticketing</span><span style="width:5%" title="Volunteers &amp; marketing coordination"></span><span style="width:5%" title="Work with ED: merch, photo, City Hall"></span><span style="width:10%" title="Community &amp; individual giving">Giving</span><span style="width:10%" title="People database &amp; reporting">Data</span></div>
       </div>
+    </div>
+    <div class="flex-block">
+      <p class="eyebrow" style="text-align:center;margin:8px 0 6px">Programs &amp; Production &middot; Event weeks vs. build weeks</p>
+      <p class="time-sub">The 20-hour production average is a blend. With about one event week in three, (58 + 40 + 40) &divide; 3 &asymp; 46 hours.</p>
+      <div class="flex-row"><div class="time-head"><span class="time-role">Event week <em>&middot; ~58 hrs</em></span></div>
+        <div class="time-bar" style="width:100.0%"><span class="seg" style="width:65.52%;background:#004221;color:#f8faf8" title="Production: on site, run-of-show, crew: about 38 hours">38h</span><span class="seg" style="width:10.34%;background:#004221;color:#f8faf8" title="Artist booking &amp; contracts: about 6 hours">6h</span><span class="seg" style="width:6.90%;background:#f46700;color:#ffffff" title="Sponsor benefit delivery: about 4 hours">4h</span><span class="seg" style="width:6.90%;background:#bcd6c3;color:#002214" title="Budgets &amp; invoices: about 4 hours">4h</span><span class="seg" style="width:5.17%;background:#004221;color:#f8faf8" title="Facilities management: about 3 hours">3h</span><span class="seg" style="width:5.17%;background:#004221;color:#f8faf8" title="Councils: about 3 hours">3h</span></div>
+        <div class="time-labels" style="width:100.0%"><span style="width:65.52%" title="Production: on site, run-of-show, crew">Production on site</span><span style="width:10.34%" title="Artist booking &amp; contracts"></span><span style="width:6.90%" title="Sponsor benefit delivery"></span><span style="width:6.90%" title="Budgets &amp; invoices"></span><span style="width:5.17%" title="Facilities management"></span><span style="width:5.17%" title="Councils"></span></div></div>
+      <div class="flex-row"><div class="time-head"><span class="time-role">Build week <em>&middot; ~40 hrs</em></span></div>
+        <div class="time-bar" style="width:69.0%"><span class="seg" style="width:25.00%;background:#004221;color:#f8faf8" title="Prep for upcoming events: about 10 hours">10h</span><span class="seg" style="width:20.00%;background:repeating-linear-gradient(135deg,#004221 0 6px,#2f6b45 6px 12px);color:#f8faf8" title="Project bank: about 8 hours">8h</span><span class="seg" style="width:10.00%;background:#004221;color:#f8faf8" title="Facilities management: about 4 hours">4h</span><span class="seg" style="width:15.00%;background:#004221;color:#f8faf8" title="Artist booking &amp; contracts: about 6 hours">6h</span><span class="seg" style="width:12.50%;background:#004221;color:#f8faf8" title="Councils: about 5 hours">5h</span><span class="seg" style="width:12.50%;background:#bcd6c3;color:#002214" title="Settlement &amp; budgets: about 5 hours">5h</span><span class="seg" style="width:5.00%;background:#004221;color:#f8faf8" title="Film Festival support: about 2 hours">2h</span></div>
+        <div class="time-labels" style="width:69.0%"><span style="width:25.00%" title="Prep for upcoming events">Prep next events</span><span style="width:20.00%" title="Project bank">Project bank</span><span style="width:10.00%" title="Facilities management">Facilities</span><span style="width:15.00%" title="Artist booking &amp; contracts">Artists</span><span style="width:12.50%" title="Councils">Councils</span><span style="width:12.50%" title="Settlement &amp; budgets">Budgets</span><span style="width:5.00%" title="Film Festival support"></span></div></div>
+      <div class="bank"><p class="bank-title">Project bank for build weeks</p><ul><li>Holds and contracts for next season&rsquo;s artists and venues</li><li>Vendor and venue renewals; insurance certificates on file</li><li>Run-of-show, budget and timeline template library</li><li>Facility improvement projects (storage, signage, equipment upgrades)</li><li>Special Projects milestones</li><li>Producing Community &amp; Engagement&rsquo;s smaller events (Art Park, Education)</li><li>Film Festival production prep, as scoped</li><li>Post-event reports and photo and asset archive</li><li>Training and professional development</li></ul><p class="bank-note">Each quarter the ED and Programs pick 3&ndash;5 bank projects with due dates and track them in the quarterly non-event deliverables list. The week after an event is lighter, for recovery.</p></div>
     </div>
     <figcaption>Working estimates from the 2027 function map, to be replaced by 2026 actuals and the 2027 event count. Programs runs 55&ndash;60 hours in event weeks; Membership peaks in March and April for the launch; the ED peaks before board meetings and during the year-end appeal.</figcaption>
   </figure>
@@ -546,11 +571,11 @@
   <div class="legend-block">
     <p class="legend-title">Notes</p>
     <ul class="intro-list">
-      <li><strong>Two full-time seats, split by outcome.</strong> Programs &amp; Production makes the shows (on time, on budget). Membership &amp; Community fills the house and keeps the people (members, sell-through, community giving). Neither is split by council.</li>
+      <li><strong>Two full-time seats, split by outcome.</strong> Programs &amp; Production makes the shows (on time, on budget). Community &amp; Engagement leads the community-facing programs and fills the house and keeps the people (members, sell-through, community giving).</li>
       <li><strong>Courtney Horvath</strong> holds the Executive Director seat, with <strong>Bill Sisson</strong>, Board Chair, as the board&rsquo;s direct liaison. There is no separate Chief of Staff role in 2027.</li>
       <li><strong>Contracted partners</strong> report to the Executive Director unless noted: the marketing coordinator works day-to-day with Membership. The bookkeeper runs the monthly close, the ED signs off, and the Treasurer reviews.</li>
-      <li><strong>Fundraising &amp; community</strong> stays shared with the board, but each area now has an owner. Day-to-day membership and community relationships, which had no owner on the 2026 chart, sit with the Membership &amp; Community Manager.</li>
-      <li><strong>Council chairs curate, staff produce.</strong> All seven councils work with Programs &amp; Production.</li>
+      <li><strong>Fundraising &amp; community</strong> stays shared with the board, but each area now has an owner. Day-to-day membership and community relationships, which had no owner on the 2026 chart, sit with the Community &amp; Engagement Manager.</li>
+      <li><strong>Council chairs curate, staff produce.</strong> Programs &amp; Production works with Music, Dance, Theater, Film and Special Projects. Community &amp; Engagement works with Public Art, Art Park, Cottages/Residency, Education and Environment. Programs produces every event.</li>
       <li>The <strong>board grid</strong>, <strong>Advisory Council</strong> and <strong>Anne Chaisson&rsquo;s</strong> separate engagement are unchanged from the current chart.</li>
     </ul>
   </div>
